@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>T-Shirts | Cairow Wear</title>
+        <link rel="icon" type="image/png" href="514471651_1717250489159628_2546183675028400726_n-modified.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(20, 20, 20, 0.9));
+      color: #a3a3a3a1;
+      font-family: 'Poppins', sans-serif;
+      min-height: 100vh;
+      padding-top: 100px;
+    }
+
+    header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 1000;
+      backdrop-filter: blur(10px);
+    }
+
+    header h2 {
+      color: #ffffff;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      transition: color 0.3s;
+      position: relative;
+      display: flex;
+      align-items: center;
+      font-size: 1rem;
+    }
+
+    nav a:hover {
+      color: #a3a3a3a1;
+    }
+
+    .cart-link {
+      font-weight: bold;
+    }
+
+    #cart-count {
+      background-color: red;
+      color: white;
+      font-size: 10px;
+      padding: 2px 6px;
+      border-radius: 50%;
+      margin-left: 6px;
+      position: absolute;
+      top: -8px;
+      right: -12px;
+    }
+
+    .products {
+      max-width: 1200px;
+      margin: 60px auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      padding: 0 20px;
+      animation: fadeIn 1.2s ease;
+    }
+
+    .product {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .product:hover {
+      transform: scale(1.05);
+    }
+
+    .product p {
+      font-size: 14px;
+      color: #ccc;
+      margin: 10px 0;
+    }
+
+    .product button {
+      background-color: #a3a3a3a1;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin-top: 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .product button:hover {
+      background-color: #cfcfcf33;
+    }
+
+    .slider {
+      overflow: hidden;
+      border-radius: 10px;
+      width: 100%;
+      aspect-ratio: 3/4;
+      position: relative;
+    }
+
+    .slider img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0; left: 0;
+      opacity: 0;
+      transform: scale(1.2);
+      transition: opacity 0.5s, transform 0.5s;
+    }
+
+    .slider img.active {
+      opacity: 1;
+      transform: scale(1);
+      position: relative;
+      z-index: 1;
+    }
+
+    .controls {
+      margin-top: 12px;
+      text-align: center;
+    }
+
+    .controls button {
+      background: rgba(0,0,0,0.6);
+      border: none;
+      color: #a3a3a3a1;
+      font-size: 20px;
+      margin: 0 10px;
+      cursor: pointer;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      color: #666;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+   <header>
+  <div style="display: flex; align-items: center;">
+    <img src="514471651_1717250489159628_2546183675028400726_n-modified.png" alt="Logo" style="height: 40px; border-radius: 50%; margin-right: 10px;">
+    <h2>Cairow Wear</h2>
+  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="#">About</a>
+  <a href="cart.html" class="cart-link">
+  🛒<span> Cart</span>
+  <span id="cart-count">0</span>
+</a>
+
+    <a href="https://www.instagram.com/cairow_c/" target="_blank">Contact</a>
+  </nav>
+</header>
+
+
+  <!-- Products -->
+  <section class="products">
+    <div class="product">
+      <div class="slider">
+        <img src="6a7fee95-dec0-4988-bc53-c8ea4b1d053e.jpeg" alt="Tee 1">
+        <img src="e4ee170e-349e-4083-8b97-8acd98581ee7.jpeg" class="active" alt="Tee 1 Alt">
+        <img src="af940f93-e878-4c8d-ac87-5d11bdb915ad.jpeg" class="active" alt="Tee 1 Alt">
+        <img src="0b4d6e71-5feb-40c9-827d-e7e9dd626fcc.jpeg" class="active" alt="Tee 1 Alt">
+
+      </div>
+      <div class="controls">
+        <button onclick="prevSlide(this)">‹</button>
+        <button onclick="nextSlide(this)">›</button>
+      </div>
+      <p>EGP 550</p>
+      <button onclick="addToCart('Tee 1', 550)">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <div class="slider">
+        <img src="3.PNG" class="active" alt="Tee 2">
+        <img src="4.PNG" alt="Tee 2 Alt">
+        <img src="5.PNG" alt="Tee 2 Alt">
+        <img src="6.PNG" alt="Tee 2 Alt">
+      </div>
+      <div class="controls">
+        <button onclick="prevSlide(this)">‹</button>
+        <button onclick="nextSlide(this)">›</button>
+      </div>
+      <p>EGP 550</p>
+      <button onclick="addToCart('Tee 2', 550)">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <div class="slider">
+        <img src="8.PNG" class="active" alt="Tee 3">
+        <img src="528e3368-61a2-4b2d-b90d-c72067aea036.jpeg" alt="Tee 3 Alt">
+      </div>
+      <div class="controls">
+        <button onclick="prevSlide(this)">‹</button>
+        <button onclick="nextSlide(this)">›</button>
+      </div>
+      <p>EGP 550</p>
+      <button onclick="addToCart('Tee 3', 550)">Add to Cart</button>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Cairo Wear. All rights reserved.
+  </footer>
+
+  <!-- JS -->
+ <script>
+  function nextSlide(btn) {
+    const slider = btn.closest(".product").querySelectorAll(".slider img");
+    let current = Array.from(slider).findIndex(img => img.classList.contains("active"));
+    slider[current].classList.remove("active");
+    let next = (current + 1) % slider.length;
+    slider[next].classList.add("active");
+  }
+
+  function prevSlide(btn) {
+    const slider = btn.closest(".product").querySelectorAll(".slider img");
+    let current = Array.from(slider).findIndex(img => img.classList.contains("active"));
+    slider[current].classList.remove("active");
+    let prev = (current - 1 + slider.length) % slider.length;
+    slider[prev].classList.add("active");
+  }
+
+  function addToCart(name, price) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    cart.push({ name, price });
+    localStorage.setItem('cart', JSON.stringify(cart));
+    updateCartCount(); // ⬅️ نحدث الرقم بعد الإضافة
+    alert(name + ' added to cart!');
+  }
+
+  function updateCartCount() {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    document.getElementById("cart-count").textContent = cart.length;
+  }
+
+  // ⬅️ نحدث الرقم أول ما الصفحة تفتح
+  window.addEventListener("DOMContentLoaded", updateCartCount);
+
+  function sendOrder() {
+    setTimeout(() => {
+      localStorage.removeItem("cart");
+      window.location.href = "confirmed.html";
+    }, 800);
+  }
+</script>
+
+
+</body>
+</html>

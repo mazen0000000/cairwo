@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cairow | Wear</title>
+    <link rel="icon" type="image/png" href="514471651_1717250489159628_2546183675028400726_n-modified.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin:0; padding:0; }
+    body {
+      background: linear-gradient(rgba(0, 0, 0, 0.824), rgba(29, 29, 29, 0.911)),
+      url('7.PNG');
+      background-size: cover;
+      color: white;
+      font-family: 'Poppins', sans-serif;
+      padding-top: 80px;
+      min-height: 80vh;
+    }
+
+    header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 1000;
+      backdrop-filter: blur(10px);
+    }
+
+    header h2 {
+      color: white;
+    }
+
+    header nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      transition: color 0.3s;
+    }
+
+    header nav a:hover {
+      color: #a3a3a3a1;
+    }
+
+    .hero-text {
+      text-align: center;
+      padding: 100px 40px 40px;
+    }
+
+    .hero-text h1 {
+      text-align: left;
+      font-size: 6.6rem;
+      color: #ffffff;
+      font-weight: 800;
+      overflow: hidden;
+    }
+
+    .hero-text h1 span {
+      display: inline-block;
+      transform: translateY(100%);
+      animation: slideUp 1s forwards;
+      animation-delay: var(--delay);
+    }
+
+    .hero-text h1:nth-child(1) span { --delay: 0.2s; }
+    .hero-text h1:nth-child(2) span { --delay: 0.4s; }
+    .hero-text h1:nth-child(3) span { --delay: 0.6s; }
+
+    @keyframes slideUp {
+      to {
+        transform: translateY(0%);
+      }
+    }
+
+    .cta {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .cta a {
+      background: #00000076;
+      color: white;
+      padding: 14px 30px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .cta a:hover {
+      background: #a3a3a3a1;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      color: #666;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 1024px) {
+      .hero-text h1 {
+        font-size: 4rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 20px;
+      }
+
+      header nav {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 10px;
+      }
+
+      header nav a {
+        margin: 8px 8px 0 0;
+        font-size: 14px;
+      }
+
+      .hero-text {
+        padding: 60px 20px 30px;
+      }
+
+      .hero-text h1 {
+        font-size: 3rem;
+        text-align: center;
+      }
+
+      .cta a {
+        font-size: 14px;
+        padding: 12px 25px;
+      }
+    }
+
+    @media (max-width: 450px) {
+      .hero-text h1 {
+        font-size: 2rem;
+        line-height: 1.3;
+      }
+
+      .cta a {
+        padding: 10px 20px;
+        font-size: 13px;
+      }
+
+      header h2 {
+        font-size: 20px;
+      }
+
+      footer {
+        font-size: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+<header>
+  <div style="display: flex; align-items: center;">
+    <img src="514471651_1717250489159628_2546183675028400726_n-modified.png" alt="Logo" style="height: 40px; border-radius: 50%; margin-right: 10px;">
+    <h2>Cairow Wear</h2>
+  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="#">About</a>
+    <a href="https://www.instagram.com/cairow_c/" target="_blank">Contact</a>
+  </nav>
+</header>
+
+
+  <!-- Hero Text -->
+  <section class="hero-text">
+    <h1><span>Join a World</span></h1>
+    <h1><span>Full of trendy</span></h1>
+    <h1><span>clothes.</span></h1>
+  </section>
+
+  <!-- CTA Button -->
+  <div class="cta">
+    <a href="shop.html">Start Shopping</a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Cairo Wear. All rights reserved.
+  </footer>
+<section id="about" style="padding: 40px 20px; text-align: center; color: #ccc;">
+  <h2 style="margin-bottom: 20px;">About Cairo Wear</h2>
+  <p style="max-width: 600px; margin: auto; font-size: 1rem;">
+    Cairo Wear isn't just a clothing brand – it's a statement.  
+    Crafted with love, worn with pride. 🖤  
+    Your comfort, your style – always our priority.
+  </p>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shop | Cairo Wear</title>
+      <link rel="icon" type="image/png" href="514471651_1717250489159628_2546183675028400726_n-modified.png" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(20, 20, 20, 0.9));
+      color: #a3a3a3a1;
+      font-family: 'Poppins', sans-serif;
+      min-height: 100vh;
+      padding-top: 100px;
+    }
+
+    header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 1000;
+      backdrop-filter: blur(10px);
+    }
+
+    header h2 {
+      color: #ffffff;
+      font-size: 1.5rem;
+    }
+
+    header nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      transition: color 0.3s;
+      font-size: 1rem;
+    }
+
+    header nav a:hover {
+      color: #a3a3a3a1;
+    }
+
+    .shop-container {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .shop-container h1 {
+      font-size: 3.5rem;
+      margin-bottom: 40px;
+      animation: fadeIn 1s ease;
+    }
+
+    .category {
+      display: inline-block;
+      background-color: #111;
+      padding: 30px 50px;
+      border-radius: 12px;
+      text-decoration: none;
+      color: #ffffff;
+      font-size: 1.6rem;
+      font-weight: bold;
+      transition: transform 0.3s, background 0.3s;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+    }
+
+    .category:hover {
+      transform: scale(1.05);
+      background-color: #1a1a1a;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      margin-top: 60px;
+      color: #666;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      header nav {
+        margin-top: 10px;
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      header nav a {
+        margin: 10px 10px 0 0;
+      }
+
+      .shop-container h1 {
+        font-size: 2.5rem;
+      }
+
+      .category {
+        font-size: 1.2rem;
+        padding: 20px 30px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .shop-container h1 {
+        font-size: 2rem;
+      }
+
+      .category {
+        font-size: 1rem;
+        padding: 15px 25px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+<header>
+  <div style="display: flex; align-items: center;">
+    <img src="514471651_1717250489159628_2546183675028400726_n-modified.png" alt="Logo" style="height: 40px; border-radius: 50%; margin-right: 10px;">
+    <h2>Cairow Wear</h2>
+  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="#">About</a>
+    <a href="https://www.instagram.com/cairow_c/" target="_blank">Contact</a>
+  </nav>
+</header>
+
+  <!-- Shop Section -->
+  <div class="shop-container">
+<h1 style="color: white;">Find your perfect match</h1>
+    <a href="tshirts.html" class="category">Products</a>
+
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Cairo Wear. All rights reserved.
+  </footer>
+
+</body>
+</html>
